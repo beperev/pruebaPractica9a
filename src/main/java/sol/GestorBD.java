@@ -1,4 +1,4 @@
-package main.java.sol;
+package sol;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -48,19 +48,19 @@ public class GestorBD implements Persistencia {
 	    }
 
   public Finca getFinca(String id) throws ExcepcionDeAplicacion {
-    return new Finca("a134", "Jorge Vigón, 3", "Logroño", "26009", "piso", 3, 3, "si", true,
+    return new Finca("a134", "Jorge Vigon, 3", "Logronio", "26009", "piso", 3, 3, "si", true,
                      new Propietario("p325", "Angel", "Abad", "Gran Via, 3", "941232323"), 45.6);
   }
 
   public Empleado getEmpleado(String id) throws ExcepcionDeAplicacion {
     return new Empleado("q12e", "Pepe", "Perez", "director", 'V', 1897.88,
                         java.util.Calendar.getInstance(),
-                        new Sucursal("e34", "Gran Via, 8", "Logroño", "26005"));
+                        new Sucursal("e34", "Gran Via, 8", "Logronio", "26005"));
   }
 
   public List<Finca> buscaFincas(double precioMin, double precioMax) throws ExcepcionDeAplicacion {
     List<Finca> l = new java.util.ArrayList<Finca>();
-    l.add(new Finca("a134", "Jorge Vigón, 3", "Logroño", "26009", "piso", 3, 3, "si", true,
+    l.add(new Finca("a134", "Jorge Vigon, 3", "Logronio", "26009", "piso", 3, 3, "si", true,
                     new Propietario("p325", "Angel", "Abad", "Gran Via, 3", "941232323"), 45.6));
     return l;
   }
@@ -84,7 +84,7 @@ public class GestorBD implements Persistencia {
   }
 
   /**
-   * Devuelve el número de fincas que hay en una ciudad.
+   * Devuelve el numero de fincas que hay en una ciudad.
    * @param ciudad String con el nombre de la ciudad
    * @return int numero de fincas en la ciudad
    */
@@ -121,7 +121,7 @@ public class GestorBD implements Persistencia {
 
   /**
    * Devuelve un objeto de tipo cliente cuyo telefono coincidad con el suministrado
-   * como parámetro.
+   * como parametro.
    * @param tfno String tfno del cliente a buscar
    * @return Cliente el cliente ue tenga el tfno o null si no hay ninguno con
    *                 ese tfno
@@ -201,7 +201,7 @@ public class GestorBD implements Persistencia {
     }
   }
 
-// Estos son metodos para probar la devolución de ARRAYs. Pero el de Strings no funciona
+// Estos son metodos para probar la devolucion de ARRAYs. Pero el de Strings no funciona
 // Devuelve una cosas raras.
 
 //  public List fincasEnPresupuesto(String idCliente) throws model.ExcepcionDeAplicacion {
@@ -299,17 +299,17 @@ public class GestorBD implements Persistencia {
 //      bd.GestorBD.aniadirEmpleado(new Empleado("AAba", "Alberto",
 //                                               "Abad Antiguo", "Comercial", 'h', 1500,
 //                                               new java.util.GregorianCalendar(1975, 7, 24),
-//                                               new Sucursal("BrZa01", "Bretón 4", "Zaragoza",
+//                                               new Sucursal("BrZa01", "Breton 4", "Zaragoza",
 //                                                            "50009")));
 //      bd.GestorBD.aniadirEmpleado(new Empleado("Salv01", "Sonia",
 //                                               "Alvarez Garcia", "Director",
 //                                               'm', 2300,
 //                                               new java.util.GregorianCalendar(1968, 3, 1),
-//                                               new Sucursal("JoLo01", "Jorge Vigón 68",
-      //                                                            "Logroño", "26004")));
+//                                               new Sucursal("JoLo01", "Jorge Vigon 68",
+      //                                                            "Logronio", "26004")));
 
       System.out.println(new GestorBD().fincasPorCiudad("Zaragoza"));
-//      System.out.println(bd.GestorBD.fincasPorCiudad("Logroño"));
+//      System.out.println(bd.GestorBD.fincasPorCiudad("Logronio"));
 //      bd.GestorBD.incrementarAlquiler(10);
 //      Cliente c = bd.GestorBD.clienteDeTfno("976123456");
 //      System.out.println(c);
