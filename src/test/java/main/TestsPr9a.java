@@ -1,30 +1,17 @@
-package test.java.main;
+package main;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
 
-import java.util.ArrayList;
-import java.util.GregorianCalendar;
-import java.util.List;
-
-import org.dbunit.Assertion;
-import org.dbunit.DatabaseUnitException;
 import org.dbunit.dataset.IDataSet;
-import org.dbunit.dataset.ITable;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
-import main.java.model.Empleado;
 import main.java.model.ExcepcionDeAplicacion;
-import main.java.model.Finca;
-import main.java.model.Propietario;
-import main.java.model.Sucursal;
-import main.java.sol.GestorBD;
-import test.java.util.TestsUtil;
+import sol.GestorBD;
+import util.TestsUtil;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class TestsPr9a extends TestsUtil {
