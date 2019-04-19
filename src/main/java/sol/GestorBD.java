@@ -11,13 +11,10 @@ import java.util.List;
 import java.util.Properties;
 
 import main.java.debug.Debug;
-import main.java.model.Cliente;
-import main.java.model.Empleado;
-import main.java.model.ExcepcionDeAplicacion;
-import main.java.model.Finca;
-import main.java.model.Propietario;
-import main.java.model.Sucursal;
+import main.java.model.*;
 import main.java.pers.Persistencia;
+
+
 
 public class GestorBD implements Persistencia {
 //  // Registro del driver apropiado para la BD a utilizar
@@ -44,7 +41,7 @@ public class GestorBD implements Persistencia {
 	    } catch (IOException ex) {
 	      ex.printStackTrace();
 	    }
-	    return valor;
+	    return valor; 
 	    }
 
   public Finca getFinca(String id) throws ExcepcionDeAplicacion {
@@ -321,5 +318,6 @@ public class GestorBD implements Persistencia {
     }
 
   }
+
 
 }
