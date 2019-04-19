@@ -71,7 +71,30 @@ create table captacion (
   fecha_captacion date         not null
 );
 alter table captacion ADD constraint pk_captaciones primary key(id_finca,id_empleado,fecha_captacion);
+CREATE OR REPLACE AND COMPILE JAVA SOURCE NAMED "Inmobiliaria" AS
+import java.sql.*;
+public class InmobiliariaStored {
+  // Para su uso con el driver JDBC interno
+  private static String url = "jdbc:default:connection:";
+
+  public static int numFincasEnCiudad(String ciudad) throws SQLException {
+    String sql = "select count(*) from finca where ciudad='" + ciudad + "'";
+    int n = 0;
+    Connection con = DriverManager.getConnection(url);
+    Statement sel = con.createStatement();
+    ResultSet rs = sel.executeQuery(sql);
+    if (rs.next()) {
+      n = rs.getInt(1);
+    }
+    rs.close();
+    sel.close();
+    return n;
+  }
+};
+
+CREATE OR REPLACE FUNCTION numeroFincasEnCiudad(ciudad VARCHAR2) RETURN NUMBER
+AS LANGUAGE JAVA
+NAME 'InmobiliariaStored.numFincasEnCiudad(java.lang.String) return int';
 
 
-CREATE SEQUENCE Mi_Cliente_SEQ START WITH 7 INCREMENT BY 1;
 SQL
