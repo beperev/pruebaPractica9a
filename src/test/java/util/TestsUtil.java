@@ -1,4 +1,4 @@
-package test.java.util;
+package util;
 
 
 
@@ -32,7 +32,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-import main.java.sol.GestorBD;
+import sol.GestorBD;
 
 public class TestsUtil {
 
